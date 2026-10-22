@@ -1,0 +1,292 @@
+@layer components {
+/* Dashboard Direktur mengikuti ukuran, hierarki, dan proporsi frame Figma. */
+.director-dashboard > .mb-4 h1 {
+  font-size: 25.6px;
+  line-height: 32px;
+  letter-spacing: -1.28px;
+}
+
+.director-dashboard .director-panel-heading h2 {
+  color: var(--color-amn-red);
+  font-size: 22.4px;
+  line-height: 32px;
+  letter-spacing: 0;
+}
+
+.director-dashboard .director-panel-heading p {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.18px;
+}
+
+.director-dashboard .director-panel-heading > a {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.director-dashboard .director-attendance-stat {
+  border-radius: 10px;
+}
+
+.director-dashboard
+  .director-attendance-stat
+  > div:first-child
+  > span:first-child {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+}
+
+.director-dashboard .director-attendance-stat > div:first-child img {
+  display: block;
+}
+
+.director-dashboard .director-attendance-stat .dashboard-chair-icon {
+  transform: rotate(180deg) scaleX(-1);
+}
+
+.director-dashboard
+  .director-attendance-stat
+  > div:first-child
+  span:nth-child(2) {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.director-dashboard .director-attendance-stat > strong {
+  font-size: 25.6px;
+  line-height: 32px;
+}
+
+.director-dashboard .employee-leave-stat > div:first-child > span:first-child {
+  width: 32px;
+  height: 32px;
+}
+
+.director-dashboard .employee-leave-stat > div:first-child img {
+  display: block;
+}
+
+.director-dashboard .employee-leave-stat > div:first-child span:nth-child(2) {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.director-dashboard .employee-leave-stat > strong {
+  font-size: 25.6px;
+  line-height: 32px;
+}
+
+.director-dashboard .employee-attendance-panel table th,
+.director-dashboard .employee-attendance-panel table td {
+  font-size: 12px;
+  line-height: 19px;
+}
+
+.director-dashboard .employee-attendance-panel table thead tr,
+.director-dashboard .employee-attendance-panel table th {
+  height: 48px;
+}
+
+.director-dashboard .employee-attendance-panel table th:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.director-dashboard .employee-attendance-panel table th:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.director-dashboard .director-permit-card .director-panel-heading h2,
+.director-dashboard .director-permit-list .director-panel-heading h2 {
+  font-size: 22px;
+}
+
+.director-dashboard .director-permit-card > div:nth-child(2) {
+  min-height: 116px;
+  padding: 19px;
+}
+
+.director-dashboard .director-permit-list > div:nth-child(2) a {
+  min-height: 46px;
+  font-size: 12px;
+  line-height: 19px;
+}
+
+.director-dashboard .director-permit-list > .director-approval-button {
+  min-height: 46px;
+  font-size: 12px;
+  line-height: 19px;
+}
+
+.director-dashboard .director-employee-panel table th,
+.director-dashboard .director-employee-panel table td {
+  font-size: 12px;
+  line-height: 19px;
+}
+
+.director-dashboard .director-employee-panel table th:first-child,
+.director-dashboard .director-employee-panel table td:first-child {
+  width: 64px;
+}
+
+.director-dashboard .director-employee-panel table th:nth-child(2),
+.director-dashboard .director-employee-panel table td:nth-child(2) {
+  width: 176px;
+}
+
+.director-dashboard .director-employee-panel table th:last-child,
+.director-dashboard .director-employee-panel table td:last-child {
+  width: 160px;
+}
+
+.director-dashboard .director-employee-actions > a,
+.director-dashboard .director-employee-actions > button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  min-height: 26px;
+  padding: 0;
+  border-radius: 8px;
+}
+
+.director-dashboard .director-employee-actions > a > span {
+  width: 26px;
+  height: 26px;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .director-dashboard .director-panel-heading p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .director-dashboard
+    .director-attendance-stat
+    > div:first-child
+    span:nth-child(2) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .director-dashboard .employee-leave-stat > div:first-child span:nth-child(2) {
+    font-size: 10px;
+    line-height: 13px;
+  }
+
+  .director-dashboard .director-panel-heading h2,
+  .director-dashboard .director-permit-card .director-panel-heading h2,
+  .director-dashboard .director-permit-list .director-panel-heading h2 {
+    font-size: 17px;
+    line-height: 24px;
+  }
+}
+
+/* Detail log pada dashboard Karyawan mengikuti skala frame Figma. */
+.employee-permit-log .director-panel-heading h2 {
+  font-size: var(--type-section-title) !important;
+  line-height: var(--line-section-title) !important;
+  letter-spacing: 0;
+}
+
+.employee-permit-log .director-panel-heading p {
+  font-size: var(--type-body) !important;
+  line-height: var(--line-body) !important;
+}
+
+.employee-permit-log .director-panel-heading > a {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.employee-permit-log > div:nth-child(2) > div {
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  border-bottom-color: #dedede;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.director-dashboard .employee-attendance-panel .employee-attendance-status {
+  min-width: 72px;
+  min-height: 28px;
+  padding: 2px 10px;
+  border-radius: 8px !important;
+  font-size: var(--type-table) !important;
+  line-height: var(--line-table) !important;
+}
+
+.month-filter-control {
+  position: relative;
+  border: 1px solid #d5d5d5;
+  border-radius: 10px;
+  color: var(--color-amn-red);
+}
+
+.month-filter-control:focus-within {
+  outline: 2px solid color-mix(in srgb, var(--color-amn-red) 20%, transparent);
+  outline-offset: 2px;
+}
+
+.month-filter-control > img {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.month-filter-control select {
+  position: absolute;
+  left: 50%;
+  width: calc(100% - 64px);
+  transform: translateX(-50%);
+  min-width: 0;
+  height: 100%;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font:
+    400 12px/20px var(--font-inter);
+  text-align: center;
+}
+
+.month-filter-control > img.month-filter-chevron {
+  width: 12px;
+  height: 12px;
+  flex: 0 0 auto;
+  transform: none;
+  border: 0;
+  object-fit: contain;
+}
+
+.employee-attendance-panel .attendance-empty-state {
+  color: #6c7278;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .employee-permit-log .director-panel-heading h2 {
+    font-size: var(--type-section-title) !important;
+    line-height: var(--line-section-title) !important;
+  }
+
+  .employee-permit-log .director-panel-heading p {
+    font-size: var(--type-body) !important;
+    line-height: var(--line-body) !important;
+  }
+
+  .employee-permit-log .director-panel-heading > a,
+  .employee-permit-log > div:nth-child(2) > div {
+    font-size: 14px !important;
+    line-height: 21px !important;
+  }
+
+}
+}

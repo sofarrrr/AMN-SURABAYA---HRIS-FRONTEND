@@ -1,0 +1,137 @@
+@layer components {
+  .home-hero {
+    zoom: 0.8;
+    min-height: clamp(520px, calc(100dvh - 110px), 686px);
+    grid-template-columns: minmax(0, 1.09fr) minmax(0, 1fr);
+    gap: clamp(36px, 8.6vw, 110px);
+  }
+
+  .home-copy {
+    padding-left: 25px;
+  }
+
+  .home-intro,
+  .home-description {
+    padding: 10px;
+    font:
+      400 25px/1.2 var(--font-inter);
+    letter-spacing: -1.25px;
+  }
+
+  .home-copy h1 {
+    padding: 10px;
+    font:
+      400 57.6px/1.22 var(--font-inter);
+    letter-spacing: -2.88px;
+  }
+
+  .home-copy h1 span {
+    display: block;
+  }
+
+  .home-description strong {
+    font-weight: 600;
+  }
+
+  .home-actions {
+    padding-top: 12px;
+  }
+
+  .home-action {
+    min-height: 127px;
+    border-bottom: 1px solid var(--color-amn-red);
+    font:
+      400 clamp(42px, 6.35vw, 96px)/1.1 var(--font-inter);
+    letter-spacing: -0.05em;
+    transition: color 150ms ease;
+  }
+
+  .home-action:hover {
+    color: var(--color-amn-pink);
+  }
+
+  .home-action:focus-visible {
+    outline: 2px solid var(--color-amn-red);
+    outline-offset: 3px;
+  }
+
+  .home-action img {
+    width: clamp(30px, 3.3vw, 50px);
+    height: clamp(30px, 3.3vw, 50px);
+  }
+
+  .home-decorative-arrow {
+    width: clamp(100px, 9.4vw, 142px);
+    height: clamp(100px, 9.4vw, 142px);
+    margin-top: clamp(60px, 7.8vw, 119px);
+    transform: rotate(-45deg);
+  }
+
+  @media (max-width: 1199px) {
+    .home-hero {
+      min-height: 0;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 42px;
+      padding-bottom: 32px;
+    }
+
+    .home-copy {
+      min-height: 460px;
+    }
+
+    .home-intro,
+    .home-description {
+      font-size: clamp(18px, 3vw, 25px);
+    }
+
+    .home-copy h1 {
+      font-size: clamp(42px, 7vw, 58px);
+    }
+
+    .home-actions {
+      padding-top: 0;
+    }
+
+    .home-action {
+      min-height: clamp(78px, 11vw, 116px);
+      font-size: clamp(40px, 8vw, 72px);
+    }
+
+    .home-decorative-arrow {
+      margin-top: 56px;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .home-hero {
+      gap: 28px;
+    }
+
+    .home-copy {
+      min-height: 0;
+      gap: 30px;
+      padding-left: 0;
+    }
+
+    .home-intro,
+    .home-description {
+      padding: 0;
+      font-size: 16px;
+    }
+
+    .home-copy h1 {
+      padding: 0;
+      font-size: clamp(42px, 12vw, 58px);
+    }
+
+    .home-action {
+      min-height: 78px;
+      font-size: clamp(38px, 10vw, 52px);
+    }
+
+    .home-action img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
