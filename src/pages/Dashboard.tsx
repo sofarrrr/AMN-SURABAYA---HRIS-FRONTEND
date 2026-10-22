@@ -81,7 +81,7 @@ function ActionButton({
     delete: 'figma-delete.svg',
   };
 
-  const actionSize = type === 'delete' ? 'size-[26px] rounded-lg p-0' : 'size-[26px] rounded-lg p-[5px]';
+  const actionSize = type === 'delete' ? 'size-[26px] [border-radius:8px] p-0' : 'size-[26px] [border-radius:8px] p-[5px]';
   const className = `${type === 'delete' ? 'inline-flex items-center justify-center' : 'inline-grid place-items-center'} ${actionSize} shrink-0 border align-middle [&_img]:size-[13px] [&_img]:object-contain ${type === 'edit' ? 'border-[#be5f00] bg-[#fff5e0]' : type === 'delete' ? 'border-[#c10000] bg-[#fdf4f4]' : 'border-[#6c7278] bg-[#fffbfb]'}`;
   const icon = <img src={`/assets/${icons[type]}`} alt="" />;
 
@@ -308,7 +308,7 @@ function PermitOverview({ role }) {
           subtitle="Daftar pengajuan perizinan yang belum di-review"
         />
 
-        <div className={"[width:100%] [display:grid] [&_a]:[min-height:46px] [&_a]:[display:flex] [&_a]:[align-items:center] [&_a]:[border-bottom:.5px_solid_#0003] [&_a]:[color:#111] [&_a]:[font:300_16px/24px_Inter,Arial,sans-serif] [&_a]:[font-size:12px] [&_a]:[line-height:19px]"}>
+        <div className={"[width:100%] [display:grid] [&_a]:[min-height:46px] [&_a]:[display:flex] [&_a]:[align-items:center] [&_a]:[border-bottom:.5px_solid_#0003] [&_a]:[color:#111] [&_a]:[font:300_14px/21px_Inter,Arial,sans-serif]"}>
           {[
             'Nadia Safitri',
             'Fajar Ramadhan',
