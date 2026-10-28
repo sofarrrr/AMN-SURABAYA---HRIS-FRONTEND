@@ -637,7 +637,7 @@
 @layer components {
   .auth-stage {
     position: relative;
-    width: min(963px, calc(100vw - 48px), calc((100dvh - 64px) * 1.3836));
+    width: min(963px, calc(100vw - 48px));
     aspect-ratio: 963 / 696;
   }
 
@@ -879,6 +879,28 @@
 
     .profile-details {
       grid-template-columns: 1fr;
+      gap: 15px;
+      padding: 9px 0 20px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .profile-details {
+      width: 100%;
+      min-height: 0;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin: 0;
+      padding: 17px 0;
+    }
+
+    .profile-avatar-container {
+      justify-self: center;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .profile-details {
       gap: 15px;
       padding: 9px 0 20px;
     }
@@ -1770,6 +1792,29 @@
   .attendance-toolbar .employee-add-button {
     width: 100% !important;
     min-width: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .user-management-page .attendance-toolbar {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+  }
+
+  .user-management-page .attendance-toolbar .employee-search {
+    width: auto !important;
+    min-width: 0;
+    max-width: 220px;
+    flex: 0 1 220px;
+    margin-right: auto;
+  }
+
+  .user-management-page .attendance-toolbar .employee-add-button {
+    width: 96px !important;
+    min-width: 96px !important;
+    flex: 0 0 96px;
+    margin-left: 0;
   }
 }
 
@@ -3118,9 +3163,54 @@ html:has(.permit-page-secretary)::-webkit-scrollbar,
     grid-column: 1 / -1;
     justify-content: flex-end;
   }
+
+  .attendance-toolbar.permit-toolbar {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 6px !important;
+  }
+
+  .attendance-toolbar.permit-toolbar .employee-search {
+    width: auto !important;
+    min-width: 0;
+    flex: 1 1 auto;
+    margin-right: 0;
+  }
+
+  .attendance-toolbar.permit-toolbar .permit-toolbar-actions {
+    width: auto;
+    flex: 0 0 auto;
+    grid-column: auto;
+    margin-left: 0;
+    gap: 6px;
+  }
+
+  .attendance-toolbar.permit-toolbar .attendance-filter-menu--period {
+    width: 145px !important;
+    flex: 0 0 145px;
+  }
+
+  .attendance-toolbar.permit-toolbar .employee-export-button {
+    width: 90px !important;
+    min-width: 90px !important;
+  }
+
+  .attendance-toolbar.permit-toolbar .permit-add-button {
+    width: 96px !important;
+    min-width: 96px !important;
+  }
 }
 
 @media (max-width: 520px) {
+  .attendance-toolbar.permit-toolbar {
+    flex-wrap: wrap !important;
+  }
+
+  .attendance-toolbar.permit-toolbar .employee-search {
+    width: 100% !important;
+    flex-basis: 100%;
+  }
+
   .permit-toolbar-actions {
     width: 100%;
     gap: 6px;
@@ -3129,6 +3219,72 @@ html:has(.permit-page-secretary)::-webkit-scrollbar,
   .permit-toolbar .attendance-filter-menu--period {
     min-width: 0;
     flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .attendance-toolbar.attendance-page-toolbar {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 6px !important;
+  }
+
+  .attendance-page-toolbar .employee-search {
+    width: 170px !important;
+    min-width: 120px;
+    flex: 0 1 170px;
+    margin-right: 0;
+  }
+
+  .attendance-page-toolbar .attendance-filter-menu--division {
+    width: 145px !important;
+    min-width: 110px;
+    flex: 0 1 145px;
+  }
+
+  .attendance-page-toolbar .attendance-filter-menu--period {
+    width: 110px !important;
+    min-width: 90px;
+    flex: 0 1 110px;
+  }
+
+  .attendance-page-toolbar .employee-export-menu {
+    width: 90px;
+    flex: 0 1 90px;
+  }
+
+  .attendance-page-toolbar .employee-export-button {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .attendance-page-toolbar .employee-add-button {
+    width: 96px !important;
+    min-width: 85px !important;
+    flex: 0 1 96px;
+  }
+}
+
+@media (max-width: 600px) {
+  .attendance-toolbar.attendance-page-toolbar {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px !important;
+  }
+
+  .attendance-page-toolbar .employee-search {
+    width: 100% !important;
+    min-width: 0;
+    grid-column: 1 / -1;
+  }
+
+  .attendance-page-toolbar .attendance-filter-menu--division,
+  .attendance-page-toolbar .attendance-filter-menu--period,
+  .attendance-page-toolbar .employee-export-menu,
+  .attendance-page-toolbar .employee-add-button {
+    width: 100% !important;
+    min-width: 0 !important;
+    flex: initial;
   }
 }
 

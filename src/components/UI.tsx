@@ -188,7 +188,7 @@ export function StatCard({ label, value, detail, icon = '◈', tone = '' }: { la
 }
 
 export function Avatar({ user, size = 'normal' }: { user?: { avatar?: string } | null; size?: string }) {
-  const sizeClasses = size === 'profile' ? 'size-[220px] min-[521px]:size-[240px] min-[801px]:size-[280px]' : size === 'large' ? 'size-[53px] sm:size-[58px]' : size === 'home' ? 'size-12' : size === 'topbar' ? 'size-8 sm:size-10 lg:size-[60px]' : 'size-[25px]';
+  const sizeClasses = size === 'profile' ? 'size-[180px] min-[1001px]:size-[280px]' : size === 'large' ? 'size-[53px] sm:size-[58px]' : size === 'home' ? 'size-12' : size === 'topbar' ? 'size-8 sm:size-10 lg:size-[60px]' : 'size-[25px]';
   const cropPosition = size === 'profile' ? 'object-[center_20%]' : size === 'home' || size === 'topbar' ? 'object-[center_11%]' : 'object-center';
   const profileClass = size === 'profile' ? 'avatar-profile' : '';
   return <img className={`${sizeClasses} ${profileClass} shrink-0 rounded-full bg-[#f1e5e5] object-cover ${cropPosition}`} src={user?.avatar || '/assets/avatar-karyawan.png'} alt="" />;

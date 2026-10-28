@@ -154,7 +154,7 @@ function PanelHeading({
 
 function AttendanceStats() {
   return (
-      <div className={"[display:grid] [grid-template-columns:repeat(4,minmax(0,1fr))] [gap:20px] [min-width:0] max-[1250px]:[gap:12px] max-[600px]:[grid-template-columns:repeat(2,minmax(0,1fr))] max-[600px]:[gap:10px] max-[1150px]:[gap:9px] max-[520px]:[grid-template-columns:repeat(2,minmax(0,1fr))] max-[520px]:[gap:7px] director-attendance-stats"}>
+      <div className={"[display:grid] [grid-template-columns:repeat(4,minmax(0,1fr))] [gap:20px] [min-width:0] max-[1250px]:[gap:12px] max-[1000px]:[grid-template-columns:repeat(2,minmax(0,1fr))] max-[600px]:[grid-template-columns:repeat(2,minmax(0,1fr))] max-[600px]:[gap:10px] max-[1150px]:[gap:9px] max-[520px]:[grid-template-columns:repeat(2,minmax(0,1fr))] max-[520px]:[gap:7px] director-attendance-stats"}>
       {attendanceStats.map(
         ([label, value, icon, tone]) => (
           <div
@@ -343,7 +343,7 @@ function OverviewDashboard({
 
       <div className={"[display:grid] [grid-template-columns:minmax(0,802fr)_minmax(196px,228fr)] [gap:22px] [align-items:stretch] max-[1000px]:[grid-template-columns:minmax(0,1fr)] max-[1000px]:[gap:20px] director-dashboard-grid"}>
         <div className={"[min-width:0] [display:grid] [gap:22px] [align-content:start] [grid-template-rows:258px_auto] max-[1000px]:[grid-template-rows:auto_auto] max-[600px]:[gap:14px]"}>
-          <section className={"[min-width:0] [padding:28px] [border:1px_solid_#dddad0] [border-radius:13px] [background:#fff] [height:258px] [display:flex] [flex-direction:column] [gap:21px] max-[1000px]:[height:258px] max-[1000px]:[min-height:258px] max-[600px]:[height:auto] max-[600px]:[gap:18px] max-[600px]:[padding:20px] max-[600px]:[min-height:0] director-attendance-panel"}>
+          <section className={"[min-width:0] [padding:28px] [border:1px_solid_#dddad0] [border-radius:13px] [background:#fff] [height:258px] [display:flex] [flex-direction:column] [gap:21px] max-[1000px]:[height:auto] max-[1000px]:[min-height:0] max-[600px]:[height:auto] max-[600px]:[gap:18px] max-[600px]:[padding:20px] max-[600px]:[min-height:0] director-attendance-panel"}>
             <PanelHeading
               title="Status Absensi Harian"
               subtitle="Laporan kehadiran 27 Juni 2026"
