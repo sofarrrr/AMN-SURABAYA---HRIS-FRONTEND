@@ -637,7 +637,7 @@
 @layer components {
   .auth-stage {
     position: relative;
-    width: min(963px, calc(100vw - 48px));
+    width: min(963px, calc(100vw - 48px), calc((100dvh - 64px) * 1.3836));
     aspect-ratio: 963 / 696;
   }
 
@@ -2147,61 +2147,6 @@
   white-space: nowrap;
 }
 
-.user-management-form-page .employee-edit-form.user-account-form:not(.user-account-edit-form) {
-  width: min(600px, 100%);
-  height: min(695px, calc(100dvh - 36px));
-  max-height: calc(100dvh - 36px);
-  gap: 0;
-  padding: 45px 35px;
-  border: 1px solid #6c7278;
-  border-radius: 16px;
-  box-shadow: 0 20px 80px rgb(34 34 34 / 14%);
-}
-
-.user-management-form-page .employee-edit-form.user-account-form:not(.user-account-edit-form) > h2 {
-  margin: 0 0 20px;
-  color: #c10000;
-  font: 600 28px/40px Inter, Arial, sans-serif;
-}
-
-.user-management-form-page .employee-edit-form.user-account-form:not(.user-account-edit-form) > label {
-  height: 81px;
-  grid-template-rows: 21px 54px;
-  gap: 2px;
-  padding: 0 0 4px;
-  color: #777;
-  font: 500 14px/21px Inter, Arial, sans-serif;
-}
-
-.user-management-form-page .employee-edit-form.user-account-form:not(.user-account-edit-form) > label > span {
-  padding-bottom: 0;
-  color: #000;
-  font: 400 14px/21px Inter, Arial, sans-serif;
-}
-
-.user-management-form-page .employee-edit-form.user-account-form:not(.user-account-edit-form) > label input,
-.user-management-form-page .employee-edit-form.user-account-form:not(.user-account-edit-form) > label select {
-  width: 100%;
-  height: 54px;
-  padding: 14px 15px;
-  border: 1px solid #dddad0;
-  border-radius: 12px;
-  background-color: #fff;
-  color: #000;
-  font: 500 16px/24px Inter, Arial, sans-serif;
-}
-
-.user-management-form-page .employee-edit-form.user-account-form:not(.user-account-edit-form) > label select {
-  appearance: none;
-  padding-right: 48px;
-  background: #fff url('/assets/figma-chevron-down.svg') no-repeat right 15px center / 20px 20px;
-  cursor: pointer;
-}
-
-.user-management-form-page .employee-edit-form.user-account-form:not(.user-account-edit-form) > label > span:first-child {
-  opacity: 0.5;
-}
-
 .user-management-form-page .employee-edit-form.user-account-edit-form {
   width: min(420px, 100%);
   height: auto;
@@ -2248,6 +2193,27 @@
   background-size: 16px 16px;
 }
 
+.user-management-form-page .employee-edit-form.user-account-form .attendance-form-select-trigger {
+  min-height: 40px;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 10px;
+  border-color: #dddad0;
+  border-radius: 8px;
+  background-image: none;
+  color: #000;
+  font: 400 12px/18px Inter, Arial, sans-serif;
+}
+
+.user-management-form-page .employee-edit-form.user-account-form .attendance-form-select-trigger img {
+  width: 16px;
+  height: 16px;
+}
+
+.user-management-form-page .employee-edit-form.user-account-form .attendance-form-select-trigger[data-empty="true"] {
+  color: #75757e;
+}
+
 .user-management-form-page .employee-edit-form.user-account-edit-form > .employee-form-actions {
   display: flex;
   justify-content: flex-end;
@@ -2287,33 +2253,18 @@
 .user-account-password-input {
   position: relative;
   display: block;
-  height: 54px;
+  height: 40px;
 }
 
 .user-account-password-input > input {
   width: 100%;
-  height: 54px;
-  padding: 14px 52px 14px 15px;
-  border: 1px solid #dddad0;
-  border-radius: 12px;
-  background-color: #fff;
-  color: #000;
-  font: 500 16px/24px Inter, Arial, sans-serif;
-}
-
-.user-account-password-input > input:focus {
-  border-color: #c10000;
-  box-shadow: 0 0 0 3px #c1000014;
-  outline: 0;
+  height: 40px;
+  padding-right: 42px;
 }
 
 .user-account-password-input > input::placeholder {
   color: #75757e;
   opacity: 1;
-}
-
-.user-account-password-input > input {
-  padding-right: 52px;
 }
 
 .user-account-edit-form .user-account-password-input {
@@ -2330,7 +2281,7 @@
 .user-account-password-input > button {
   position: absolute;
   top: 50%;
-  right: 14px;
+  right: 6px;
   display: grid;
   width: 24px;
   height: 24px;
@@ -2343,54 +2294,20 @@
 }
 
 .user-account-password-input > button img {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   object-fit: contain;
+}
+
+.user-account-password-input > button img[src*="figma-eye-off.svg"] {
+  filter: brightness(0) saturate(100%) invert(46%) sepia(8%) saturate(446%)
+    hue-rotate(176deg) brightness(93%) contrast(87%);
 }
 
 .user-account-form-error {
   margin: 0 0 12px;
   color: #b32222;
   font: 400 14px/21px Inter, Arial, sans-serif;
-}
-
-.user-management-form-page .employee-edit-form.user-account-form:not(.user-account-edit-form) > .employee-form-actions {
-  gap: 10px;
-  margin-top: 60px;
-}
-
-.user-management-form-page .employee-edit-form.user-account-form:not(.user-account-edit-form) > .employee-form-actions > button {
-  width: 98px;
-  min-width: 98px;
-  height: 40px;
-  min-height: 40px;
-  padding: 0 20px;
-  border: 1px solid #c10000;
-  border-radius: 8px;
-  font: 500 14px/21px Inter, Arial, sans-serif !important;
-}
-
-.user-management-form-page .employee-edit-form.user-account-form:not(.user-account-edit-form) > .employee-form-actions > button[type='submit'] {
-  background: #c10000;
-  color: #fff;
-}
-
-.user-management-form-page .employee-edit-form.user-account-form:not(.user-account-edit-form) > .employee-form-actions > button[type='button'] {
-  background: #fff;
-  color: #c10000;
-}
-
-@media (max-width: 640px) {
-  .user-management-form-page .employee-edit-form.user-account-form:not(.user-account-edit-form) {
-    height: auto;
-    min-height: min(695px, calc(100dvh - 24px));
-    padding: 28px 20px;
-  }
-
-  .user-management-form-page .employee-edit-form.user-account-form:not(.user-account-edit-form) > .employee-form-actions {
-    margin-top: 32px;
-  }
-
 }
 
 .permit-form-title,
@@ -3426,6 +3343,21 @@ html:has(.permit-page-secretary)::-webkit-scrollbar,
   .login-page {
     width: 310.4px;
     gap: 38px;
+  }
+
+  @media (max-height: 720px) {
+    .login-page {
+      gap: 24px;
+    }
+
+    .login-intro {
+      gap: 14px;
+    }
+
+    .login-form,
+    .login-social-section {
+      gap: 14px;
+    }
   }
 
   .login-intro {

@@ -24,7 +24,7 @@ export default function TataLetakAplikasi() {
   }
 
   return (
-    <div className={`${collapsed ? 'md:grid-cols-[72px_minmax(0,1fr)]' : 'md:grid-cols-[232px_minmax(0,1fr)]'} min-h-dvh w-full bg-white md:grid`}>
+    <div className={`${collapsed ? 'md:grid-cols-[minmax(0,1fr)]' : 'md:grid-cols-[232px_minmax(0,1fr)]'} min-h-dvh w-full bg-white md:grid`}>
       <Sidebar
         role={user.role}
         open={open}

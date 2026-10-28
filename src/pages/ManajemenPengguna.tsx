@@ -65,13 +65,24 @@ function UserDetails({ user, role, onClose }) {
 }
 
 /** Form untuk menambah atau mengubah data akun pengguna. */
-function UserFormDropdown({ name, value, options, onChange, label }) {
+function UserFormDropdown({ name, value, options, onChange, label, placeholder }) {
   return (
     <>
       <input type="hidden" name={name} value={value} />
-      <details className="attendance-form-select-menu" name="attendance-form-select">
-        <summary className="attendance-filter-trigger attendance-form-select-trigger">
-          <span>{value}</span>
+      <details
+        className="attendance-form-select-menu"
+        name="attendance-form-select"
+        data-required="true"
+        data-value={value}
+      >
+        <summary
+          className="attendance-filter-trigger attendance-form-select-trigger"
+          data-empty={!value}
+          aria-label={`${label}: ${value || placeholder}`}
+          aria-required="true"
+          aria-invalid={!value}
+        >
+          <span>{value || placeholder}</span>
           <img src="/assets/figma-chevron-down.svg" alt="" />
         </summary>
         <div className="employee-export-options attendance-form-select-options" role="listbox" aria-label={`Pilih ${label}`}>
@@ -96,8 +107,8 @@ function UserFormDropdown({ name, value, options, onChange, label }) {
 }
 
 function UserForm({ user, editing, users, onSave, onCancel }) {
-  const initialRole = editing ? user.role : 'Karyawan';
-  const initialStatus = editing ? user.status || 'Aktif' : 'Aktif';
+  const initialRole = editing ? user.role : '';
+  const initialStatus = editing ? user.status || 'Aktif' : '';
   const [error, setError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [roleValue, setRoleValue] = useState(initialRole);
@@ -170,29 +181,17 @@ function UserForm({ user, editing, users, onSave, onCancel }) {
               aria-pressed={showPassword}
               onClick={() => setShowPassword((visible) => !visible)}
             >
-              <img src={showPassword ? '/assets/figma-eye-off.svg' : '/assets/figma-view.svg'} alt="" />
+              <img src={showPassword ? '/assets/figma-view.svg' : '/assets/figma-eye-off.svg'} alt="" />
             </button>
           </div>
         </label>
         <label className={employeeFieldClass}>
           <span>Role</span>
-          {editing ? (
-            <UserFormDropdown name="role" value={roleValue} options={['Direktur', 'Sekretaris', 'Manajer', 'Karyawan']} onChange={setRoleValue} label="role" />
-          ) : (
-            <select name="role" defaultValue={initialRole}>
-              <option>Direktur</option><option>Sekretaris</option><option>Manajer</option><option>Karyawan</option>
-            </select>
-          )}
+          <UserFormDropdown name="role" value={roleValue} options={['Direktur', 'Sekretaris', 'Manajer', 'Karyawan']} onChange={setRoleValue} label="role" placeholder="Pilih role" />
         </label>
         <label className={employeeFieldClass}>
           <span>Status</span>
-          {editing ? (
-            <UserFormDropdown name="status" value={statusValue} options={['Aktif', 'Non Aktif']} onChange={setStatusValue} label="status" />
-          ) : (
-            <select name="status" defaultValue={initialStatus}>
-              <option>Aktif</option><option>Non Aktif</option>
-            </select>
-          )}
+          <UserFormDropdown name="status" value={statusValue} options={['Aktif', 'Non Aktif']} onChange={setStatusValue} label="status" placeholder="Pilih status" />
         </label>
       </DataKaryawanFormModal>
     </div>

@@ -53,7 +53,7 @@ export function Sidebar({ role, open, collapsed, onClose, onToggleCollapse }: Si
 
       <aside
         aria-label="Navigasi utama"
-        className={`fixed inset-y-0 left-0 z-50 flex w-[min(82vw,232px)] flex-col gap-0 overflow-hidden bg-[#c10000] text-white transition-transform duration-200 md:sticky md:top-0 md:h-dvh md:min-h-0 md:w-full md:translate-x-0 ${open ? 'translate-x-0' : '-translate-x-full'}`}
+        className={`fixed inset-y-0 left-0 z-50 flex w-[min(82vw,232px)] flex-col gap-0 overflow-hidden bg-[#c10000] text-white transition-transform duration-200 md:sticky md:top-0 md:h-dvh md:min-h-0 md:w-full md:translate-x-0 ${collapsed ? 'md:hidden' : ''} ${open ? 'translate-x-0' : '-translate-x-full'}`}
       >
         <div className={`flex min-h-[76px] items-center gap-3 px-4 py-3 md:h-[86px] md:min-h-[86px] md:gap-[10px] md:px-[19px] md:py-0 ${collapsed ? 'md:justify-center md:px-2' : ''}`}>
           <img className="size-10 shrink-0 object-contain" src="/assets/logo-amn.png" alt="Logo AMN" />
