@@ -7,7 +7,7 @@ export function PageTitle({ title, subtitle, action, className = '' }: { title: 
   return (
     <div className={`page-title-sticky mb-4 flex min-h-7 flex-col gap-2 sm:mb-6 sm:flex-row sm:items-center sm:justify-between sm:gap-4 ${className}`}>
       <div className="min-w-0">
-        <h1 className="mb-0 font-[Inter] text-2xl font-semibold leading-8 tracking-normal text-[#c10000] sm:text-[32px] sm:leading-10">{title}</h1>
+        <h1 className="mb-0 font-[Inter] text-2xl font-semibold leading-8 tracking-normal text-[#b91c1c] sm:text-[32px] sm:leading-10">{title}</h1>
         {subtitle && <p className="mt-1 text-xs leading-5 text-[#6c7278]">{subtitle}</p>}
       </div>
       {action}
@@ -29,9 +29,9 @@ export function Pagination({ page, totalPages, onPageChange, label = 'Navigasi h
               : [1, 'ellipsis', page - 1, page, page + 1, 'ellipsis', totalPages];
 
     return (
-      <nav className={"pagination-sticky [display:flex] [justify-content:flex-end] [gap:6px] [margin-top:48px] [&_button]:[width:31px] [&_button]:[height:30px] [&_button]:[border:1px_solid_#c10000] [&_button]:[border-radius:6px] [&_button]:[background:#fff] [&_button]:[color:#c10000] [&_button]:[font:400_14px/20px_Inter,Arial,sans-serif] [&_button:first-child]:[background:#c10000] [&_button:first-child]:[color:#fff] [&_button:last-child]:[background:#c10000] [&_button:last-child]:[color:#fff] [&_button.selected]:[background:#c10000] [&_button.selected]:[color:#fff] [&_button[aria-current=page]]:[border-color:#c10000] [&_button[aria-current=page]]:[background:#c10000] [&_button[aria-current=page]]:[color:#fff] max-[800px]:[margin-top:32px] [&_button]:[font-size:var(--type-caption)]! [&_button]:[line-height:var(--line-caption)]! " + className} aria-label={label} data-pagination-container>
+      <nav className={"pagination-sticky [display:flex] [justify-content:flex-end] [gap:6px] [margin-top:48px] [&_button]:[width:31px] [&_button]:[height:30px] [&_button]:[border:1px_solid_#b91c1c] [&_button]:[border-radius:6px] [&_button]:[background:#fff] [&_button]:[color:#b91c1c] [&_button]:[font:400_14px/20px_Inter,Arial,sans-serif] [&_button:first-child]:[background:#b91c1c] [&_button:first-child]:[color:#fff] [&_button:last-child]:[background:#b91c1c] [&_button:last-child]:[color:#fff] [&_button.selected]:[background:#b91c1c] [&_button.selected]:[color:#fff] [&_button[aria-current=page]]:[border-color:#b91c1c] [&_button[aria-current=page]]:[background:#b91c1c] [&_button[aria-current=page]]:[color:#fff] max-[800px]:[margin-top:32px] [&_button]:[font-size:var(--type-caption)]! [&_button]:[line-height:var(--line-caption)]! " + className} aria-label={label} data-pagination-container>
         <button
-          className="grid h-[30px] w-[31px] place-items-center rounded-md border border-[#c10000] bg-[#c10000] font-[Inter] text-[var(--type-caption)] leading-[var(--line-caption)] text-white"
+          className="grid h-[30px] w-[31px] place-items-center rounded-md border border-[#b91c1c] bg-[#b91c1c] font-[Inter] text-[var(--type-caption)] leading-[var(--line-caption)] text-white"
           type="button"
           aria-label="Halaman sebelumnya"
           onClick={(event) => changePageKeepingPosition(event, () => onPageChange(Math.max(1, page - 1)))}
@@ -39,12 +39,12 @@ export function Pagination({ page, totalPages, onPageChange, label = 'Navigasi h
           ‹
         </button>
         {paginationItems.map((pageNumber, index) => pageNumber === 'ellipsis' ? (
-          <span className="grid h-[30px] w-[31px] place-items-center text-[#c10000]" aria-hidden="true" key={`ellipsis-${index}`}>
+          <span className="grid h-[30px] w-[31px] place-items-center text-[#b91c1c]" aria-hidden="true" key={`ellipsis-${index}`}>
             …
           </span>
         ) : (
           <button
-            className={`grid size-9 place-items-center rounded-md border text-xs ${page === pageNumber ? 'border-[#c10000] bg-[#c10000] text-white' : 'border-[#dddad0] bg-white text-[#252525] hover:border-[#c10000]'}`}
+            className={`grid size-9 place-items-center rounded-md border text-xs ${page === pageNumber ? 'border-[#b91c1c] bg-[#b91c1c] text-white' : 'border-[#dddad0] bg-white text-[#252525] hover:border-[#b91c1c]'}`}
             type="button"
             aria-label={`Halaman ${pageNumber}`}
             aria-current={page === pageNumber ? 'page' : undefined}
@@ -55,7 +55,7 @@ export function Pagination({ page, totalPages, onPageChange, label = 'Navigasi h
           </button>
         ))}
         <button
-          className="grid h-[30px] w-[31px] place-items-center rounded-md border border-[#c10000] bg-[#c10000] font-[Inter] text-[var(--type-caption)] leading-[var(--line-caption)] text-white"
+          className="grid h-[30px] w-[31px] place-items-center rounded-md border border-[#b91c1c] bg-[#b91c1c] font-[Inter] text-[var(--type-caption)] leading-[var(--line-caption)] text-white"
           type="button"
           aria-label="Halaman berikutnya"
           onClick={(event) => changePageKeepingPosition(event, () => onPageChange(Math.min(totalPages, page + 1)))}
@@ -75,7 +75,7 @@ export function Pagination({ page, totalPages, onPageChange, label = 'Navigasi h
   return (
     <nav className={`pagination-sticky flex justify-end ${size === 'large' ? 'mt-[70px] gap-3' : 'mt-6 gap-1.5'}`} aria-label={label} data-pagination-container>
       <button
-        className={`grid place-items-center border border-[#c10000] bg-[#c10000] text-white disabled:opacity-40 ${buttonSize}`}
+        className={`grid place-items-center border border-[#b91c1c] bg-[#b91c1c] text-white disabled:opacity-40 ${buttonSize}`}
         type="button"
         aria-label="Halaman sebelumnya"
         disabled={page === 1}
@@ -85,7 +85,7 @@ export function Pagination({ page, totalPages, onPageChange, label = 'Navigasi h
       </button>
       {Array.from({ length: totalPages }, (_, index) => index + 1).map((pageNumber) => (
         <button
-          className={`grid place-items-center ${buttonSize} ${page === pageNumber ? 'border-[#c10000] bg-[#c10000] text-white' : 'border-[#dddad0] bg-white text-[#252525] hover:border-[#c10000]'}`}
+          className={`grid place-items-center ${buttonSize} ${page === pageNumber ? 'border-[#b91c1c] bg-[#b91c1c] text-white' : 'border-[#dddad0] bg-white text-[#252525] hover:border-[#b91c1c]'}`}
           type="button"
           aria-current={page === pageNumber ? 'page' : undefined}
           key={pageNumber}
@@ -95,7 +95,7 @@ export function Pagination({ page, totalPages, onPageChange, label = 'Navigasi h
         </button>
       ))}
       <button
-        className={`grid place-items-center border border-[#c10000] bg-[#c10000] text-white disabled:opacity-40 ${buttonSize}`}
+        className={`grid place-items-center border border-[#b91c1c] bg-[#b91c1c] text-white disabled:opacity-40 ${buttonSize}`}
         type="button"
         aria-label="Halaman berikutnya"
         disabled={page === totalPages}
@@ -116,16 +116,16 @@ type ButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onClick' | 'si
 };
 
 export function Button({ children, variant = 'primary', size = 'default', to, onClick, type = 'button', className = '', ...props }: ButtonProps) {
-  const base = `inline-flex items-center justify-center gap-3 border font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c10000] disabled:cursor-not-allowed disabled:opacity-50 ${size === 'large' ? 'min-h-14 rounded-xl px-6 py-4 text-base leading-6' : 'min-h-10 rounded-md px-4 py-2 text-sm leading-5'}`;
+  const base = `inline-flex items-center justify-center gap-3 border font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b91c1c] disabled:cursor-not-allowed disabled:opacity-50 ${size === 'large' ? 'min-h-14 rounded-xl px-6 py-4 text-base leading-6' : 'min-h-10 rounded-md px-4 py-2 text-sm leading-5'}`;
   const style = variant === 'outline'
-    ? 'border-[#c10000] bg-white text-[#c10000] hover:bg-[#fff5e0]'
+    ? 'border-[#b91c1c] bg-white text-[#b91c1c] hover:bg-[#fff5e0]'
     : variant === 'light'
-      ? 'border-transparent bg-white text-[#c10000] hover:bg-[#fff7f7]'
+      ? 'border-transparent bg-white text-[#b91c1c] hover:bg-[#fff7f7]'
       : variant === 'text'
-        ? 'min-h-8 border-transparent bg-transparent px-1 text-[#c10000] hover:bg-transparent hover:text-[#cc0000]'
+        ? 'min-h-8 border-transparent bg-transparent px-1 text-[#b91c1c] hover:bg-transparent hover:text-[#cc0000]'
         : variant === 'danger'
-          ? 'border-[#c10000] bg-[#fdf4f4] text-[#c10000] hover:bg-[#fff1f1]'
-          : 'border-transparent bg-[#c10000] text-white hover:bg-[#cc0000]';
+          ? 'border-[#b91c1c] bg-[#fdf4f4] text-[#b91c1c] hover:bg-[#fff1f1]'
+          : 'border-transparent bg-[#b91c1c] text-white hover:bg-[#cc0000]';
   const classes = `${base} ${style} ${className}`;
 
   return to
@@ -174,7 +174,7 @@ export function Badge({ children, className = '' }: { children: ReactNode; class
 }
 
 export function StatCard({ label, value, detail, icon = '◈', tone = '' }: { label: ReactNode; value: ReactNode; detail: ReactNode; icon?: ReactNode; tone?: string }) {
-  const toneClasses = tone === 'green' ? 'bg-[#e2f5ee] text-[#008c5a]' : tone === 'gold' ? 'bg-[#fff5e0] text-[#be5f00]' : tone === 'purple' ? 'bg-[#f0ebff] text-[#7550ad]' : 'bg-[#fff0f0] text-[#c10000]';
+  const toneClasses = tone === 'green' ? 'bg-[#e2f5ee] text-[#008c5a]' : tone === 'gold' ? 'bg-[#fff5e0] text-[#be5f00]' : tone === 'purple' ? 'bg-[#f0ebff] text-[#7550ad]' : 'bg-[#fff0f0] text-[#b91c1c]';
   return (
     <Card className="flex items-center gap-3 p-3 sm:gap-4 sm:p-[18px]">
       <div className={`grid size-9 shrink-0 place-items-center rounded-xl text-xl sm:size-11 ${toneClasses}`}>{icon}</div>
@@ -199,7 +199,7 @@ export function Table({ columns, rows, empty = 'Tidak ada data', className = '' 
   return (
     <div className="w-full min-w-0 overflow-x-auto">
       <table className={`w-full min-w-[700px] border-collapse text-left ${className}`}>
-        <thead><tr>{columns.map((column, index) => <th className="h-14 whitespace-nowrap bg-[#c10000] px-4 py-4 text-sm font-medium leading-6 text-white" key={index}>{column.label}</th>)}</tr></thead>
+        <thead><tr>{columns.map((column, index) => <th className="h-14 whitespace-nowrap bg-[#b91c1c] px-4 py-4 text-sm font-medium leading-6 text-white" key={index}>{column.label}</th>)}</tr></thead>
         <tbody>
           {rows.length ? rows.map((row, index) => <tr className="h-16" key={row.key || index}>{columns.map((column, cellIndex) => <td className="border-b border-[#e5e5e5] px-4 py-4 text-sm leading-6 text-[#252525]" key={cellIndex}>{column.render ? column.render(row) : column.key ? row[column.key] : null}</td>)}</tr>) : <tr><td colSpan={columns.length} className="p-8 text-center text-sm text-[#6c7278]">{empty}</td></tr>}
         </tbody>
@@ -237,7 +237,7 @@ export type EmployeeFormData = {
 
 export function DataKaryawanSearchBar({ query, onQueryChange, ariaLabel = 'Cari karyawan', className = '' }: { query: string; onQueryChange: (query: string) => void; ariaLabel?: string; className?: string }) {
   return (
-    <label className={`employee-search flex h-[39px] w-[200px] items-center gap-[7px] rounded-[10px] border border-[#c10000] px-[13px] text-[#c10000] max-[800px]:h-9 max-[800px]:w-full ${className}`}>
+    <label className={`employee-search flex h-[39px] w-[200px] items-center gap-[7px] rounded-[10px] border border-[#b91c1c] px-[13px] text-[#b91c1c] max-[800px]:h-9 max-[800px]:w-full ${className}`}>
       <img className="size-4 shrink-0 object-contain" src="/assets/figma-search-red.svg" alt="" />
       <input
         className="employee-search-input h-full min-w-0 flex-1 bg-transparent outline-none"
@@ -260,7 +260,7 @@ export function DataKaryawanBreadcrumb({ href, current, parentLabel = 'Data Kary
   );
 }
 
-export const employeeFieldClass = "[display:grid] [gap:1px] [padding-bottom:3px] [color:#777] [font:500_14px/21px_Inter,Arial,sans-serif] [&_input]:[width:100%] [&_input]:[height:38px] [&_input]:[padding:0_11px] [&_input]:[border:1px_solid_#dddad0] [&_input]:[border-radius:8px] [&_input]:[background:#fff] [&_input]:[color:#111] [&_input]:[font:500_16px/24px_Inter,Arial,sans-serif] [&_input]:[outline:none] [&_select]:[width:100%] [&_select]:[height:38px] [&_select]:[padding:0_11px] [&_select]:[border:1px_solid_#dddad0] [&_select]:[border-radius:8px] [&_select]:[background:#fff] [&_select]:[color:#111] [&_select]:[font:500_16px/24px_Inter,Arial,sans-serif] [&_select]:[outline:none] [&_input:focus]:[border-color:#c10000] [&_input:focus]:[box-shadow:0_0_0_3px_#c1000014] [&_select:focus]:[border-color:#c10000] [&_select:focus]:[box-shadow:0_0_0_3px_#c1000014] [font-size:var(--type-helper)]! [line-height:var(--line-helper)]! [&_input]:[font-size:var(--type-input)]! [&_input]:[line-height:var(--line-input)]! [&_select]:[font-size:var(--type-input)]! [&_select]:[line-height:var(--line-input)]! [&>span]:[font-size:var(--type-label)]! [&>span]:[line-height:var(--line-label)]!";
+export const employeeFieldClass = "[display:grid] [gap:1px] [padding-bottom:3px] [color:#777] [font:500_14px/21px_Inter,Arial,sans-serif] [&_input]:[width:100%] [&_input]:[height:38px] [&_input]:[padding:0_11px] [&_input]:[border:1px_solid_#dddad0] [&_input]:[border-radius:8px] [&_input]:[background:#fff] [&_input]:[color:#111] [&_input]:[font:500_16px/24px_Inter,Arial,sans-serif] [&_input]:[outline:none] [&_select]:[width:100%] [&_select]:[height:38px] [&_select]:[padding:0_11px] [&_select]:[border:1px_solid_#dddad0] [&_select]:[border-radius:8px] [&_select]:[background:#fff] [&_select]:[color:#111] [&_select]:[font:500_16px/24px_Inter,Arial,sans-serif] [&_select]:[outline:none] [&_input:focus]:[border-color:#b91c1c] [&_input:focus]:[box-shadow:0_0_0_3px_#b91c1c14] [&_select:focus]:[border-color:#b91c1c] [&_select:focus]:[box-shadow:0_0_0_3px_#b91c1c14] [font-size:var(--type-helper)]! [line-height:var(--line-helper)]! [&_input]:[font-size:var(--type-input)]! [&_input]:[line-height:var(--line-input)]! [&_select]:[font-size:var(--type-input)]! [&_select]:[line-height:var(--line-input)]! [&>span]:[font-size:var(--type-label)]! [&>span]:[line-height:var(--line-label)]!";
 
 function EmployeeBirthDateField({ value, onChange, DatePicker }: {
   value: string;
@@ -387,7 +387,7 @@ export function DataKaryawanFormModal({
       if (event.target === event.currentTarget) onCancel();
     }}>
       <form
-        className={`employee-edit-form [width:min(420px,100%)] [max-height:min(550px,calc(100dvh_-_26px))] [overflow-y:auto] [padding:28px_25px_25px] [border:1px_solid_#dddad0] [border-radius:11px] [background:#fff] [box-shadow:0_20px_80px_#2222] [display:grid] [align-content:start] [gap:7px] [&_h2]:[margin:0_0_18px] [&_h2]:[color:#c10000] [&_h2]:[font:600_28px/40px_Inter,Arial,sans-serif] [&_h2]:[letter-spacing:-1.1px] max-[520px]:[padding:20px_17px_17px] max-[520px]:[border-radius:14px] max-[520px]:[&_h2]:[font-size:17px] max-[520px]:[&_h2]:[line-height:23px] [&_h2]:[margin-bottom:13px] [&_h2]:[font-size:var(--type-modal-title)]! [&_h2]:[line-height:var(--line-modal-title)]! ${className}`}
+        className={`employee-edit-form [width:min(420px,100%)] [max-height:min(550px,calc(100dvh_-_26px))] [overflow-y:auto] [padding:28px_25px_25px] [border:1px_solid_#dddad0] [border-radius:11px] [background:#fff] [box-shadow:0_20px_80px_#2222] [display:grid] [align-content:start] [gap:7px] [&_h2]:[margin:0_0_18px] [&_h2]:[color:#b91c1c] [&_h2]:[font:600_28px/40px_Inter,Arial,sans-serif] [&_h2]:[letter-spacing:-1.1px] max-[520px]:[padding:20px_17px_17px] max-[520px]:[border-radius:14px] max-[520px]:[&_h2]:[font-size:17px] max-[520px]:[&_h2]:[line-height:23px] [&_h2]:[margin-bottom:13px] [&_h2]:[font-size:var(--type-modal-title)]! [&_h2]:[line-height:var(--line-modal-title)]! ${className}`}
         onSubmit={(event) => {
           const missingDropdown = event.currentTarget.querySelector<HTMLDetailsElement>(
             'details[data-required="true"][data-value=""]',
@@ -422,9 +422,9 @@ export function DataKaryawanFormModal({
           </>
         )}
 
-        <div className="[display:flex] [justify-content:flex-end] [gap:7px] [margin-top:34px] [&_.button]:[width:69px] [&_.button]:[min-width:69px] [&_.button]:[min-height:34px] [&_.button]:[padding:0_10px] [&_.button]:[border-radius:6px] [&_.button]:[font-size:10px] [&_.button-outline]:[border-color:#c10000] [&_.button-outline]:[color:#c10000] [&_.button-outline]:[background:#fff] max-[520px]:[margin-top:17px] employee-form-actions">
+        <div className="[display:flex] [justify-content:flex-end] [gap:7px] [margin-top:34px] [&_.button]:[width:69px] [&_.button]:[min-width:69px] [&_.button]:[min-height:34px] [&_.button]:[padding:0_10px] [&_.button]:[border-radius:6px] [&_.button]:[font-size:10px] [&_.button-outline]:[border-color:#b91c1c] [&_.button-outline]:[color:#b91c1c] [&_.button-outline]:[background:#fff] max-[520px]:[margin-top:17px] employee-form-actions">
           <Button type="button" variant="outline" onClick={onCancel}>Batal</Button>
-          <button type="submit" className="[min-height:39px] [display:inline-flex] [align-items:center] [justify-content:center] [gap:8px] [border:1px_solid_transparent] [border-radius:8px] [background:#c10000] [color:#fff] [padding:0_17px] [font-size:var(--type-button)]! [font-weight:600] [white-space:nowrap] [transition:.15s] [&:hover]:[background:#cc0000] [font:500_14px/24px_Inter,Arial,sans-serif] [box-shadow:none] max-[520px]:[min-height:40px] [line-height:var(--line-button)]! max-[520px]:[padding:0_12px] max-[520px]:[font-size:9px]">{submitLabel || 'Simpan'}</button>
+          <button type="submit" className="[min-height:39px] [display:inline-flex] [align-items:center] [justify-content:center] [gap:8px] [border:1px_solid_transparent] [border-radius:8px] [background:#b91c1c] [color:#fff] [padding:0_17px] [font-size:var(--type-button)]! [font-weight:600] [white-space:nowrap] [transition:.15s] [&:hover]:[background:#cc0000] [font:500_14px/24px_Inter,Arial,sans-serif] [box-shadow:none] max-[520px]:[min-height:40px] [line-height:var(--line-button)]! max-[520px]:[padding:0_12px] max-[520px]:[font-size:9px]">{submitLabel || 'Simpan'}</button>
         </div>
       </form>
     </div>

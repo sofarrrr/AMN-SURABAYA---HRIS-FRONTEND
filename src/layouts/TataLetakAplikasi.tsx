@@ -36,7 +36,7 @@ export default function TataLetakAplikasi() {
       <div className={`${dashboardPage ? 'min-h-0' : 'min-h-dvh'} min-w-0`}>
         <header className="sticky top-0 z-30 flex h-[86px] items-center justify-between gap-4 bg-white px-3 sm:px-5 lg:px-7">
           <button
-            className="-ml-2 grid size-10 shrink-0 place-items-center rounded-lg text-[#c10000] hover:bg-[#fff5e0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c10000] md:hidden"
+            className="-ml-2 grid size-10 shrink-0 place-items-center rounded-lg text-[#b91c1c] hover:bg-[#fff5e0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b91c1c] md:hidden"
             onClick={() => setOpen((value) => !value)}
             aria-label={open ? 'Tutup menu' : 'Buka menu'}
             aria-expanded={open}
@@ -44,7 +44,7 @@ export default function TataLetakAplikasi() {
             <img className="size-4 shrink-0 object-contain" src="/assets/figma-menu.svg" alt="" />
           </button>
           <button
-            className="-ml-2 hidden size-10 shrink-0 place-items-center rounded-lg text-[#c10000] hover:bg-[#fff5e0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c10000] md:grid"
+            className="-ml-2 hidden size-10 shrink-0 place-items-center rounded-lg text-[#b91c1c] hover:bg-[#fff5e0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b91c1c] md:grid"
             onClick={() => setCollapsed((value) => !value)}
             aria-label={collapsed ? 'Perluas menu' : 'Ciutkan menu'}
             aria-expanded={!collapsed}
@@ -55,7 +55,7 @@ export default function TataLetakAplikasi() {
           {homePage && (
             <nav className="flex min-w-0 flex-1 items-center justify-start gap-2 overflow-x-auto sm:justify-center sm:gap-5 lg:gap-8" aria-label="Navigasi halaman">
               {homeNavigation.map(([label, path]) => (
-                <Link key={path} className="whitespace-nowrap rounded-full px-2 py-2 text-xs text-[#c10000] hover:bg-[#fff5e0] sm:text-sm lg:px-7 lg:text-base" to={`/${role}/${path}`}>
+                <Link key={path} className="whitespace-nowrap rounded-full px-2 py-2 text-xs text-[#b91c1c] hover:bg-[#fff5e0] sm:text-sm lg:px-7 lg:text-base" to={`/${role}/${path}`}>
                   {label}
                 </Link>
               ))}

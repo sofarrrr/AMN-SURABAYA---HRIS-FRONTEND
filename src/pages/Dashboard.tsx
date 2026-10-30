@@ -82,7 +82,7 @@ function ActionButton({
   };
 
   const actionSize = type === 'delete' ? 'size-[26px] [border-radius:8px] p-0' : 'size-[26px] [border-radius:8px] p-[5px]';
-  const className = `${type === 'delete' ? 'inline-flex items-center justify-center' : 'inline-grid place-items-center'} ${actionSize} shrink-0 border align-middle [&_img]:size-[13px] [&_img]:object-contain ${type === 'edit' ? 'border-[#be5f00] bg-[#fff5e0]' : type === 'delete' ? 'border-[#c10000] bg-[#fdf4f4]' : 'border-[#6c7278] bg-[#fffbfb]'}`;
+  const className = `${type === 'delete' ? 'inline-flex items-center justify-center' : 'inline-grid place-items-center'} ${actionSize} shrink-0 border align-middle [&_img]:size-[13px] [&_img]:object-contain ${type === 'edit' ? 'border-[#be5f00] bg-[#fff5e0]' : type === 'delete' ? 'border-[#b91c1c] bg-[#fdf4f4]' : 'border-[#6c7278] bg-[#fffbfb]'}`;
   const icon = <img src={`/assets/${icons[type]}`} alt="" />;
 
   return type === 'delete' ? (
@@ -103,7 +103,7 @@ function PanelHeading({
   monthFilter,
 }: { title: string; subtitle?: string; link?: string; date?: string; linkText?: string; monthFilter?: { value: string; onChange: (value: string) => void } }) {
   return (
-    <div className={"[display:flex] [align-items:flex-start] [justify-content:space-between] [gap:13px] [min-width:0] [&_h2]:[margin:0] [&_h2]:[color:#c10000] [&_h2]:[font:600_26px/40px_Inter,Arial,sans-serif] [&_h2]:[letter-spacing:-.3px] [&_p]:[margin:0] [&_p]:[color:#0008] [&_p]:[font:400_14px/21px_Inter,Arial,sans-serif] [&_p]:[letter-spacing:.1px] max-[600px]:[gap:8px] max-[600px]:[&_h2]:[font-size:21px] max-[600px]:[&_h2]:[line-height:29px] max-[600px]:[&_p]:[font-size:12px] max-[600px]:[&_p]:[line-height:18px] max-[600px]:[&:has(.figma-date-select)]:[flex-direction:column] [&_h2]:[font-size:var(--type-section-title)]! [&_h2]:[line-height:var(--line-section-title)]! [&_p]:[font-size:var(--type-body)]! [&_p]:[line-height:var(--line-body)]! max-[520px]:[&_h2]:[font-size:15px] max-[520px]:[&_h2]:[line-height:21px] max-[520px]:[&_p]:[font-size:8px] max-[520px]:[&_p]:[line-height:12px] max-[520px]:[gap:6px] max-[520px]:[&:has(.figma-date-select)]:[flex-direction:column] director-panel-heading"}>
+    <div className={"[display:flex] [align-items:flex-start] [justify-content:space-between] [gap:13px] [min-width:0] [&_h2]:[margin:0] [&_h2]:[color:#b91c1c] [&_h2]:[font:600_26px/40px_Inter,Arial,sans-serif] [&_h2]:[letter-spacing:-.3px] [&_p]:[margin:0] [&_p]:[color:#0008] [&_p]:[font:400_14px/21px_Inter,Arial,sans-serif] [&_p]:[letter-spacing:.1px] max-[600px]:[gap:8px] max-[600px]:[&_h2]:[font-size:21px] max-[600px]:[&_h2]:[line-height:29px] max-[600px]:[&_p]:[font-size:12px] max-[600px]:[&_p]:[line-height:18px] max-[600px]:[&:has(.figma-date-select)]:[flex-direction:column] [&_h2]:[font-size:var(--type-section-title)]! [&_h2]:[line-height:var(--line-section-title)]! [&_p]:[font-size:var(--type-body)]! [&_p]:[line-height:var(--line-body)]! max-[520px]:[&_h2]:[font-size:15px] max-[520px]:[&_h2]:[line-height:21px] max-[520px]:[&_p]:[font-size:8px] max-[520px]:[&_p]:[line-height:12px] max-[520px]:[gap:6px] max-[520px]:[&:has(.figma-date-select)]:[flex-direction:column] director-panel-heading"}>
       <div>
         <h2>{title}</h2>
         <p>{subtitle}</p>
@@ -130,7 +130,7 @@ function PanelHeading({
           <img className="month-filter-chevron" src="/assets/figma-chevron-down-red.svg" alt="" />
         </label>
       ) : date ? (
-        <div className={"figma-date-select [height:39px] [width:146px] [flex:none] [display:flex] [align-items:center] [gap:8px] [padding:0_14px] [border:1px_solid_#d5d5d5] [border-radius:8px] [color:#c10000] [font:400_14px/20px_Inter,Arial,sans-serif] [&_img]:[width:13px] [&_img]:[height:13px] [&_img]:[object-fit:contain] [&_span]:[flex:1] [&_span]:[white-space:nowrap] [&_b]:[font-size:11px] [&_b]:[font-weight:400] max-[600px]:[width:100%] max-[600px]:[height:46px] [font-size:10px] [line-height:14px] max-[520px]:[width:100%] max-[520px]:[height:32px]"}>
+        <div className={"figma-date-select [height:39px] [width:146px] [flex:none] [display:flex] [align-items:center] [gap:8px] [padding:0_14px] [border:1px_solid_#d5d5d5] [border-radius:8px] [color:#b91c1c] [font:400_14px/20px_Inter,Arial,sans-serif] [&_img]:[width:13px] [&_img]:[height:13px] [&_img]:[object-fit:contain] [&_span]:[flex:1] [&_span]:[white-space:nowrap] [&_b]:[font-size:11px] [&_b]:[font-weight:400] max-[600px]:[width:100%] max-[600px]:[height:46px] [font-size:10px] [line-height:14px] max-[520px]:[width:100%] max-[520px]:[height:32px]"}>
           <img
             src="/assets/figma-attendance.svg"
             alt=""
@@ -142,7 +142,7 @@ function PanelHeading({
         link && (
           <Link
             to={link}
-            className={`[display:inline-flex] [flex:none] [align-items:center] [gap:10px] [margin-top:2px] [color:#c10000] [font:500_12px/18px_Inter,Arial,sans-serif] [white-space:nowrap] [&_span]:[font-size:16px] [&_span]:[line-height:1] ${linkText === 'Detail' ? '[margin-top:5px] [font-size:14px] [line-height:21px]' : ''}`}
+            className={`[display:inline-flex] [flex:none] [align-items:center] [gap:10px] [margin-top:2px] [color:#b91c1c] [font:500_12px/18px_Inter,Arial,sans-serif] [white-space:nowrap] [&_span]:[font-size:16px] [&_span]:[line-height:1] ${linkText === 'Detail' ? '[margin-top:5px] [font-size:14px] [line-height:21px]' : ''}`}
           >
             {linkText} <span>→</span>
           </Link>
@@ -171,7 +171,7 @@ function AttendanceStats() {
               </span>
 
               <span
-                className={`min-w-0 text-right text-[12px] leading-[16px] ${tone === 'success' ? 'text-[#008c5a]' : tone === 'danger' ? 'text-[#c10000]' : 'text-[#be5f00]'}`}
+                className={`min-w-0 text-right text-[12px] leading-[16px] ${tone === 'success' ? 'text-[#008c5a]' : tone === 'danger' ? 'text-[#b91c1c]' : 'text-[#be5f00]'}`}
               >
                 {label}
               </span>
@@ -204,7 +204,7 @@ function EmployeeOverview({
       />
 
       <div className={"[width:100%] [min-width:0] [overflow-x:auto] [overscroll-behavior-x:contain]"}>
-        <table className={"[width:100%] [min-width:469px] [border-collapse:separate] [border-spacing:0] [text-align:left] [&_thead_tr]:[height:48px] [&_thead_tr]:[background:#c10000] [&_th]:[height:48px] [&_th]:[padding:0_13px] [&_th]:[background:#c10000] [&_th]:[color:#fff] [&_th]:[font:500_12px/19px_Inter,Arial,sans-serif] [&_th]:[letter-spacing:0] [&_th:first-child]:[border-radius:12px_0_0_12px] [&_th:first-child]:[text-align:center] [&_th:last-child]:[border-radius:0_12px_12px_0] [&_th:last-child]:[text-align:center] [&_td]:[height:50px] [&_td]:[padding:7px_13px] [&_td]:[border-bottom:.5px_solid_#0003] [&_td]:[color:#111] [&_td]:[font:300_12px/19px_Inter,Arial,sans-serif] [&_td]:[vertical-align:middle] [&_td:first-child]:[text-align:center] [&_td:last-child]:[text-align:center] [&_tbody_tr:last-child_td]:[border-bottom-color:#0002] max-[600px]:[min-width:680px] [&_th]:[font-size:var(--type-table)]! [&_th]:[line-height:var(--line-table)]! [&_td]:[font-size:var(--type-table)]! [&_td]:[line-height:var(--line-table)]! max-[520px]:[min-width:476px] director-employee-table"}>
+        <table className={"[width:100%] [min-width:469px] [border-collapse:separate] [border-spacing:0] [text-align:left] [&_thead_tr]:[height:48px] [&_thead_tr]:[background:#b91c1c] [&_th]:[height:48px] [&_th]:[padding:0_13px] [&_th]:[background:#b91c1c] [&_th]:[color:#fff] [&_th]:[font:500_12px/19px_Inter,Arial,sans-serif] [&_th]:[letter-spacing:0] [&_th:first-child]:[border-radius:12px_0_0_12px] [&_th:first-child]:[text-align:center] [&_th:last-child]:[border-radius:0_12px_12px_0] [&_th:last-child]:[text-align:center] [&_td]:[height:50px] [&_td]:[padding:7px_13px] [&_td]:[border-bottom:.5px_solid_#0003] [&_td]:[color:#111] [&_td]:[font:300_12px/19px_Inter,Arial,sans-serif] [&_td]:[vertical-align:middle] [&_td:first-child]:[text-align:center] [&_td:last-child]:[text-align:center] [&_tbody_tr:last-child_td]:[border-bottom-color:#0002] max-[600px]:[min-width:680px] [&_th]:[font-size:var(--type-table)]! [&_th]:[line-height:var(--line-table)]! [&_td]:[font-size:var(--type-table)]! [&_td]:[line-height:var(--line-table)]! max-[520px]:[min-width:476px] director-employee-table"}>
           <thead>
             <tr>
               <th>No</th>
@@ -293,7 +293,7 @@ function PermitOverview({ role }) {
               />
             </span>
 
-            <span className={"[min-width:0] [color:#be5f00] [font:500_12px/16px_Inter,Arial,sans-serif] [text-align:right] [&.success]:[color:#008c5a] [&.warning]:[color:#be5f00] [&.danger]:[color:#c10000] [font-size:12px] [line-height:16px] warning"}>
+            <span className={"[min-width:0] [color:#be5f00] [font:500_12px/16px_Inter,Arial,sans-serif] [text-align:right] [&.success]:[color:#008c5a] [&.warning]:[color:#be5f00] [&.danger]:[color:#b91c1c] [font-size:12px] [line-height:16px] warning"}>
               Total Perizinan
             </span>
           </div>
@@ -390,7 +390,7 @@ function LeaveOverview({ role }) {
                 />
               </span>
 
-              <span className={"[min-width:0] [color:#be5f00] [font:500_12px/16px_Inter,Arial,sans-serif] [text-align:right] [&.success]:[color:#008c5a] [&.warning]:[color:#be5f00] [&.danger]:[color:#c10000] [font-size:12px] [line-height:16px] max-[600px]:[font-size:10px] max-[600px]:[line-height:13px] success"}>
+              <span className={"[min-width:0] [color:#be5f00] [font:500_12px/16px_Inter,Arial,sans-serif] [text-align:right] [&.success]:[color:#008c5a] [&.warning]:[color:#be5f00] [&.danger]:[color:#b91c1c] [font-size:12px] [line-height:16px] max-[600px]:[font-size:10px] max-[600px]:[line-height:13px] success"}>
                 {label}
               </span>
             </div>
@@ -419,7 +419,7 @@ function MonthlyAttendance() {
       />
 
       <div className={"[width:100%] [min-width:0] [overflow-x:auto] [overscroll-behavior-x:contain]"}>
-        <table className={"[width:100%] [min-width:469px] [border-collapse:separate] [border-spacing:0] [text-align:left] [&_thead_tr]:[height:48px] [&_thead_tr]:[background:#c10000] [&_th]:[height:48px] [&_th]:[padding:0_11px] [&_th]:[background:#c10000] [&_th]:[color:#fff] [&_th]:[font:400_16px/24px_Inter,Arial,sans-serif] [&_th]:[letter-spacing:0] [&_th:first-child]:[border-radius:8px_0_0_8px] [&_th:first-child]:[text-align:center] [&_th:last-child]:[border-radius:0_8px_8px_0] [&_th:last-child]:[text-align:center] [&_td]:[height:45px] [&_td]:[padding:7px_11px] [&_td]:[border-bottom:.5px_solid_#0003] [&_td]:[color:#111] [&_td]:[font:300_15px/22px_Inter,Arial,sans-serif] [&_td]:[vertical-align:middle] [&_td:first-child]:[text-align:center] [&_td:last-child]:[text-align:center] [&_tbody_tr:last-child_td]:[border-bottom-color:#0002] max-[600px]:[min-width:680px] [&_th]:[font-size:var(--type-table)]! [&_th]:[line-height:var(--line-table)]! [&_td]:[font-size:var(--type-table)]! [&_td]:[line-height:var(--line-table)]! max-[520px]:[min-width:476px]"}>
+        <table className={"[width:100%] [min-width:469px] [border-collapse:separate] [border-spacing:0] [text-align:left] [&_thead_tr]:[height:48px] [&_thead_tr]:[background:#b91c1c] [&_th]:[height:48px] [&_th]:[padding:0_11px] [&_th]:[background:#b91c1c] [&_th]:[color:#fff] [&_th]:[font:400_16px/24px_Inter,Arial,sans-serif] [&_th]:[letter-spacing:0] [&_th:first-child]:[border-radius:8px_0_0_8px] [&_th:first-child]:[text-align:center] [&_th:last-child]:[border-radius:0_8px_8px_0] [&_th:last-child]:[text-align:center] [&_td]:[height:45px] [&_td]:[padding:7px_11px] [&_td]:[border-bottom:.5px_solid_#0003] [&_td]:[color:#111] [&_td]:[font:300_15px/22px_Inter,Arial,sans-serif] [&_td]:[vertical-align:middle] [&_td:first-child]:[text-align:center] [&_td:last-child]:[text-align:center] [&_tbody_tr:last-child_td]:[border-bottom-color:#0002] max-[600px]:[min-width:680px] [&_th]:[font-size:var(--type-table)]! [&_th]:[line-height:var(--line-table)]! [&_td]:[font-size:var(--type-table)]! [&_td]:[line-height:var(--line-table)]! max-[520px]:[min-width:476px]"}>
           <thead>
             <tr>
               <th>No</th>
@@ -507,7 +507,7 @@ function PermitSummary() {
             />
           </span>
 
-          <span className={"[min-width:0] [color:#be5f00] [font:500_12px/16px_Inter,Arial,sans-serif] [text-align:right] [&.success]:[color:#008c5a] [&.warning]:[color:#be5f00] [&.danger]:[color:#c10000] [font-size:8px] [line-height:11px] warning"}>
+          <span className={"[min-width:0] [color:#be5f00] [font:500_12px/16px_Inter,Arial,sans-serif] [text-align:right] [&.success]:[color:#008c5a] [&.warning]:[color:#be5f00] [&.danger]:[color:#b91c1c] [font-size:8px] [line-height:11px] warning"}>
             Total Izin Bulanan
           </span>
         </div>

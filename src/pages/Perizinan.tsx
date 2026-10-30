@@ -228,7 +228,7 @@ export default function Perizinan({ backgroundView = false }: { backgroundView?:
     worksheet.autoFilter = 'A1:H1';
     worksheet.getRow(1).height = 28;
     worksheet.getRow(1).eachCell((cell) => {
-      cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFC10000' } };
+      cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFB91C1C' } };
       cell.font = { bold: true, color: { argb: 'FFFFFFFF' } };
       cell.alignment = { vertical: 'middle' };
     });
@@ -556,12 +556,12 @@ export default function Perizinan({ backgroundView = false }: { backgroundView?:
             />
           </label>
 
-          <div className="permit-edit-actions [display:flex] [justify-content:flex-end] [gap:7px] [margin-top:34px] [&_.button]:[width:69px] [&_.button]:[min-width:69px] [&_.button]:[min-height:34px] [&_.button]:[padding:0_10px] [&_.button-outline]:[border-color:#c10000] [&_.button-outline]:[color:#c10000] [&_.button-outline]:[background:#fff] max-[520px]:[margin-top:17px]">
+          <div className="permit-edit-actions [display:flex] [justify-content:flex-end] [gap:7px] [margin-top:34px] [&_.button]:[width:69px] [&_.button]:[min-width:69px] [&_.button]:[min-height:34px] [&_.button]:[padding:0_10px] [&_.button-outline]:[border-color:#b91c1c] [&_.button-outline]:[color:#b91c1c] [&_.button-outline]:[background:#fff] max-[520px]:[margin-top:17px]">
             <Button className="permit-cancel-button" variant="outline" type="button" onClick={close}>
               Batal
             </Button>
 
-            <button type="submit" className="permit-submit-button [min-height:39px] [display:inline-flex] [align-items:center] [justify-content:center] [gap:8px] [border:1px_solid_transparent] [border-radius:8px] [background:#c10000] [color:#fff] [padding:0_17px] [font-size:var(--type-button)]! [font-weight:600] [white-space:nowrap] [transition:.15s] [&:hover]:[background:#cc0000] [font:500_14px/24px_Inter,Arial,sans-serif] [box-shadow:none] max-[520px]:[min-height:40px] [line-height:var(--line-button)]! max-[520px]:[padding:0_12px]">
+            <button type="submit" className="permit-submit-button [min-height:39px] [display:inline-flex] [align-items:center] [justify-content:center] [gap:8px] [border:1px_solid_transparent] [border-radius:8px] [background:#b91c1c] [color:#fff] [padding:0_17px] [font-size:var(--type-button)]! [font-weight:600] [white-space:nowrap] [transition:.15s] [&:hover]:[background:#cc0000] [font:500_14px/24px_Inter,Arial,sans-serif] [box-shadow:none] max-[520px]:[min-height:40px] [line-height:var(--line-button)]! max-[520px]:[padding:0_12px]">
               {edit ? 'Simpan' : 'Kirim'}
             </button>
           </div>

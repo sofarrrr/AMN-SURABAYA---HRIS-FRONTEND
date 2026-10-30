@@ -240,7 +240,7 @@ export default function Absensi() {
       cell.fill = {
         type: 'pattern',
         pattern: 'solid',
-        fgColor: { argb: 'FFC10000' },
+        fgColor: { argb: 'FFB91C1C' },
       };
       cell.font = { bold: true, color: { argb: 'FFFFFFFF' } };
       cell.alignment = { vertical: 'middle' };
