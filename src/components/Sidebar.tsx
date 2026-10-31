@@ -59,7 +59,7 @@ export function Sidebar({ role, open, collapsed, onClose, onToggleCollapse }: Si
           <img className="size-10 shrink-0 object-contain" src="/assets/logo-amn.png" alt="Logo AMN" />
           <span className={`min-w-0 flex-1 whitespace-nowrap text-[#fff5e0] [font:500_12.8px/19.2px_'Plus_Jakarta_Sans',Inter,sans-serif] ${collapsed ? 'md:hidden' : ''}`}>AMN Surabaya</span>
           <button
-            className="grid size-9 shrink-0 place-items-center rounded-lg text-xl text-white hover:bg-white/10 md:hidden"
+            className="grid size-10 shrink-0 place-items-center rounded-lg text-2xl text-white hover:bg-white/10 md:hidden"
             onClick={onClose}
             aria-label="Tutup menu"
           >

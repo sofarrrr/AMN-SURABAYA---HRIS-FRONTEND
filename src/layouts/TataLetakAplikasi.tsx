@@ -36,12 +36,12 @@ export default function TataLetakAplikasi() {
       <div className={`${dashboardPage ? 'min-h-0' : 'min-h-dvh'} min-w-0`}>
         <header className="sticky top-0 z-30 flex h-[86px] items-center justify-between gap-4 bg-white px-3 sm:px-5 lg:px-7">
           <button
-            className="-ml-2 grid size-10 shrink-0 place-items-center rounded-lg text-[#b91c1c] hover:bg-[#fff5e0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b91c1c] md:hidden"
+            className="-ml-2 grid size-12 shrink-0 place-items-center rounded-lg text-[#b91c1c] hover:bg-[#fff5e0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b91c1c] md:hidden"
             onClick={() => setOpen((value) => !value)}
             aria-label={open ? 'Tutup menu' : 'Buka menu'}
             aria-expanded={open}
           >
-            <img className="size-4 shrink-0 object-contain" src="/assets/figma-menu.svg" alt="" />
+            <img className="size-6 shrink-0 object-contain" src="/assets/figma-menu.svg" alt="" />
           </button>
           <button
             className="-ml-2 hidden size-10 shrink-0 place-items-center rounded-lg text-[#b91c1c] hover:bg-[#fff5e0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b91c1c] md:grid"
